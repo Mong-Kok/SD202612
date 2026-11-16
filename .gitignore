@@ -1,0 +1,4 @@
+# 生成スクリプトが書き出す中間ファイル（python3 model/Tools/prepare_sanjo_station.py で再生成できます）
+model/Resources/
+__pycache__/
+.DS_Store

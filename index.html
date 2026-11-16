@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SD202612 — かつて存在した景色や人を、今の世界に置いて見る</title>
+<meta name="description" content="Software Design 2026年12月号「万能IT技術研究所」第55回のサポートページ。AIが復元した1967年頃の京阪三条駅を、ブラウザで歩けます。">
+<style>
+:root{--bg:#f4f5f1;--ink:#1f2a27;--sub:#56635f;--card:#ffffff;--line:#d9ddd6;--accent:#2f6b5c;--accent-ink:#ffffff}
+@media (prefers-color-scheme: dark){:root{--bg:#18211f;--ink:#e9eeea;--sub:#a9b6b1;--card:#22302c;--line:#34443f;--accent:#7fc4b0;--accent-ink:#10201b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;line-height:1.75}
+main{max-width:1040px;margin:0 auto;padding:28px 16px 48px}
+header p.series{margin:0;color:var(--sub);font-size:14px}
+h1{margin:6px 0 10px;font-size:clamp(22px,4.4vw,32px);line-height:1.35}
+p.lead{margin:0 0 22px;max-width:46em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left center;background:#26302d}
+.card .body{display:flex;flex-direction:column;flex:1;padding:14px 16px 16px}
+.card h2{margin:0 0 6px;font-size:18px;line-height:1.45}
+.card p{margin:0 0 12px;font-size:15px}
+.card .meta{margin-top:auto;color:var(--sub);font-size:13px}
+a.open{display:inline-block;margin-top:8px;padding:9px 16px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none}
+a.open:focus-visible,a.open:hover{outline:3px solid var(--ink);outline-offset:2px}
+section.notes{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+section.notes h2{font-size:17px;margin:0 0 8px}
+section.notes ul{margin:0;padding-left:1.3em}
+section.notes li{margin:2px 0;font-size:15px}
+table{border-collapse:collapse;margin:6px 0 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:5px 12px;text-align:left}
+th{text-align:center;font-weight:600}
+footer{margin-top:28px;color:var(--sub);font-size:13px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="series">『Software Design』2026年12月号　連載「万能IT技術研究所」第55回　サポートページ</p>
+<h1>かつて存在した景色や人を、今の世界に置いて見る</h1>
+<p class="lead">1987年に地下へ潜った京阪電車の三条駅（京都）を、画像を理解するAIが3Dモデルとして復元しました。下のボタンを押すと、そのモデルをブラウザの中で眺められます。アプリのインストールは要りません。</p>
+</header>
+
+<div class="cards">
+
+<article class="card">
+<img src="docs/viewer_front.png" alt="復元した三条駅の駅舎正面。時計と駅名の看板、奥にホームと電車が見える">
+<div class="body">
+<h2>1967年頃の三条駅を歩く</h2>
+<p>駅舎の正面、鴨川へ張り出したホーム、疏水に架かる鉄橋の下、電車の中。12の視点から、消えた地上駅を眺められます。</p>
+<p class="meta">読み込み約11MB</p>
+<a class="open" href="三条駅3Dビューア/三条駅1967_3Dビューア.html">三条駅を開く</a>
+</div>
+</article>
+
+<article class="card">
+<img src="docs/evolution.png" alt="工程を切り替えて三条駅の3Dモデルを見比べる画面">
+<div class="body">
+<h2>AIが駅を作っていった過程を見比べる</h2>
+<p>何もない状態から、床、壁、色と材質、電車、人物、川側のホームへ。視点を固定したまま12の工程を切り替えると、AIがどこを直したかが分かります。</p>
+<p class="meta">読み込み約26MB（Wi-Fi をおすすめします）</p>
+<a class="open" href="進化の比較/model-comparison.html">工程の比較を開く</a>
+</div>
+</article>
+
+<article class="card">
+<img src="docs/viewer_kyoto.png" alt="時計台の屋上の学生と旗、時計台前の学生と立看板、正門のバリケードの3Dモデル">
+<div class="body">
+<h2>1969年の京都大学・時計台を眺める</h2>
+<p>記事の最後で時計台に重ねた、学生・旗・立看板・バリケードです。現存する建物に重ねるためのモデルなので、建物は位置合わせ用の線だけで描いています。</p>
+<p class="meta">読み込み約19MB</p>
+<a class="open" href="京都大学1969_3Dビューア/京都大学1969_3Dビューア.html">京都大学を開く</a>
+</div>
+</article>
+
+<article class="card">
+<img src="docs/experiment_sign_and_color.png" alt="駅名の看板を万能駅に、電車の帯を青に書き換えた三条駅">
+<div class="body">
+<h2>コードを書き換えて、自分の駅にする</h2>
+<p>AIが書いたPythonコードを自分のPCで走らせると、約10秒で同じ駅ができます。1行書き換えれば、看板も電車の色も変わります。</p>
+<p class="meta">Python 3 が要ります（追加ライブラリなし）</p>
+<a class="open" href="https://github.com/Mong-Kok/SD202612#readme">コードと手順を見る（GitHub）</a>
+</div>
+</article>
+
+</div>
+
+<section class="notes">
+<h2>操作</h2>
+<table>
+<tr><th>したいこと</th><th>PC</th><th>スマホ・タブレット</th></tr>
+<tr><td>回す</td><td>ドラッグ</td><td>1本指でなぞる</td></tr>
+<tr><td>近づく・離れる</td><td>スクロール</td><td>2本指で広げる・つまむ</td></tr>
+<tr><td>横へずらす</td><td>右ドラッグ</td><td>2本指でなぞる</td></tr>
+</table>
+</section>
+
+<section class="notes">
+<h2>知っておいてほしいこと</h2>
+<ul>
+<li>資料にもとづく推定復元です。測量図や施工図から起こしたものではなく、寸法・床の高さ・細部には推定が含まれます。</li>
+<li>参考にした写真は載せていません。色や模様は独自に生成したものです。資料へのリンクは各画面の中にあります。</li>
+<li>電車は配置の例、人物は架空です。特定の日の編成や実在の人を再現したものではありません。</li>
+</ul>
+</section>
+
+<footer>
+<p>コードと3Dモデルは MIT License です。くわしい説明は <a href="https://github.com/Mong-Kok/SD202612">GitHub の SD202612</a> にあります。</p>
+</footer>
+</main>
+</body>
+</html>
